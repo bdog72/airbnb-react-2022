@@ -1,0 +1,31 @@
+/*  */
+/*  */
+
+.gray1 {
+  color: #918e9b;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.card-container {
+  /* border: 1px solid #000; */
+  font-size: 12px;
+  width: 175px;
+  margin: 50px 37px;
+}
+
+.card-image {
+  width: 100%;
+  border-radius: 9px;
+}
+
+.card-stats {
+  display: flex;
+  align-items: center;
+}
+
+.card-star {
+  height: 14px;
+}
