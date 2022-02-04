@@ -24,6 +24,7 @@
 .card-stats {
   display: flex;
   align-items: center;
+  gap: 5px;
 }
 
 .card-star {
