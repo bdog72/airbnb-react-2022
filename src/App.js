@@ -1,27 +1,39 @@
-// //
-// //
+//
+//
 
+import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Card from './components/Card';
 
-import cardImage from './images/katie-zaferes.png';
+import { dataItems } from './data';
+console.log(dataItems);
 
-function App() {
+// dataItems.map((data) => {
+//   console.log(data.title);
+//   return data;
+// });
+
+export default function App() {
   return (
     <div>
       <Navbar />
-      <Hero header='Online Experiences' />
-      <Card
-        img={cardImage}
-        rating={5}
-        reviewCount={6}
-        country='USA'
-        title='Life lessons with Katie Zaferes'
-        price={136}
-      />
+      <Hero />;
+      {dataItems.map((data) => {
+        console.log(data);
+
+        return (
+          <Card
+            key={data.id}
+            img={data.coverImg}
+            rating={data.stats.rating}
+            reviewCount={data.stats.reviewCount}
+            location={data.location}
+            title={data.description}
+            price={data.price}
+          />
+        );
+      })}
     </div>
   );
 }
-
-export default App;
