@@ -1,24 +1,13 @@
 /*  */
 /*  */
 
-section {
-  padding: 20px;
-}
-
-.hero {
+nav {
+  height: 70px;
   display: flex;
-  flex-direction: column;
+  padding: 20px 36px;
+  box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.1);
 }
 
-.hero--photo {
-  max-width: 100%;
-  align-self: center;
-}
-
-.hero--header {
-  margin-bottom: 16px;
-}
-
-.hero--text {
-  margin-top: 0;
+.nav__logo {
+  max-width: 100px;
 }
