@@ -1,10 +1,6 @@
 /*  */
 /*  */
 
-section {
-  padding: 20px;
-}
-
 .hero {
   display: flex;
   flex-direction: column;
@@ -13,16 +9,13 @@ section {
 .hero--photo {
   max-width: 800px;
   width: 100%;
-  padding: 0 20px;
   align-self: center;
 }
 
 .hero--header {
-  /* border: 1px solid #000; */
   margin-bottom: 16px;
 }
 
 .hero--text {
-  /* border: 1px solid #000; */
   margin-top: 0;
 }

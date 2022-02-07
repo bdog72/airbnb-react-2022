@@ -11,3 +11,15 @@ body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
 }
+
+.bold {
+  font-weight: bold;
+}
+
+.gray {
+  color: #918e9b;
+}
+
+section {
+  padding: 20px;
+}
