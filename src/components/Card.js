@@ -5,19 +5,26 @@ import React from 'react';
 
 import '../styles/Card.css';
 
-export default function Card() {
+export default function Card({
+  img,
+  rating,
+  reviewCount,
+  country,
+  title,
+  price,
+}) {
   return (
     <div className='card'>
-      <img src='../images/katie-zaferes.png' className='card--image' alt='' />
+      <img src={img} className='card--image' alt='' />
       <div className='card--stats'>
         <img src='../images/star.png' className='card--star' alt='' />
-        <span>5.0</span>
-        <span className='gray'>(6) • </span>
-        <span className='gray'>USA</span>
+        <span>{rating}</span>
+        <span className='gray'>({parseInt(reviewCount)})</span>
+        <span className='gray'>{country}</span>
       </div>
-      <p>Life Lessons with Katie Zaferes</p>
+      <p>{title}</p>
       <p>
-        <span className='bold'>From $136</span> / person
+        <span className='bold'>From ${parseInt(price)}</span> / person
       </p>
     </div>
   );
