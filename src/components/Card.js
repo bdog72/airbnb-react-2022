@@ -9,7 +9,7 @@ export default function Card({
   img,
   rating,
   reviewCount,
-  country,
+  location,
   title,
   price,
 }) {
@@ -20,7 +20,7 @@ export default function Card({
         <img src='../images/star.png' className='card--star' alt='' />
         <span>{rating}</span>
         <span className='gray'>({parseInt(reviewCount)})</span>
-        <span className='gray'>{country}</span>
+        <span className='gray'>{location}</span>
       </div>
       <p>{title}</p>
       <p>

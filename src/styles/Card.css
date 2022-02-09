@@ -1,8 +1,13 @@
 /*  */
 /*  */
 
+.card-container {
+  display: flex;
+  flex-direction: row;
+}
+
 .card {
-  width: 175px;
+  width: 275px;
   font-size: 12px;
 }
 
