@@ -10,19 +10,8 @@ import Card from './components/Card';
 import datajsData from './data';
 
 const personalElements = datajsData.map((data) => {
-  return (
-    <Card
-      key={data.id}
-      img={data.coverImg}
-      rating={data.stats.rating}
-      reviewCount={data.stats.reviewCount}
-      location={data.location}
-      title={data.title}
-      price={data.price}
-    />
-  );
+  return <Card key={data.id} data={data} />;
 });
-console.log(personalElements);
 
 export default function App() {
   return (

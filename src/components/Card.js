@@ -5,26 +5,31 @@ import React from 'react';
 
 import '../styles/Card.css';
 
-export default function Card({
-  img,
-  rating,
-  reviewCount,
-  location,
-  title,
-  price,
-}) {
+export default function Card(props) {
+  let badgeText;
+
+  if (props.data.openSpots === 0) {
+    badgeText = 'SOLD OUT';
+  } else if (props.data.location === 'Online') {
+    badgeText = `Online`;
+  } else {
+    badgeText = ``;
+  }
+
   return (
     <div className='card'>
-      <img src={img} className='card--image' alt='' />
+      {badgeText && <div className='card--badge'>{badgeText}</div>}
+      <img src={props.data.coverImg} className='card--image' alt='' />
       <div className='card--stats'>
         <img src='../images/star.png' className='card--star' alt='' />
-        <span>{rating}</span>
-        <span className='gray'>({parseInt(reviewCount)})</span>
-        <span className='gray'>{location}</span>
+        <span>{props.data.stats.rating}</span>
+        <span className='gray'>({parseInt(props.data.stats.reviewCount)})</span>
+        <span className='gray'>{props.data.location}</span>
       </div>
-      <p>{title}</p>
+      <p>{props.data.title}</p>
       <p>
-        <span className='bold'>From ${parseInt(price)}</span> / person
+        <span className='bold'>From ${parseInt(props.data.price)}</span> /
+        person
       </p>
     </div>
   );
